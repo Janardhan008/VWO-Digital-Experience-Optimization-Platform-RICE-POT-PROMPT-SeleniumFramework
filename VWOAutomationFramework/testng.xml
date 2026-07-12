@@ -91,4 +91,47 @@
         </classes>
     </test>
 
+    <!-- Booking API Test Suites -->
+    <test name="Booking API - Health Check">
+        <classes>
+            <class name="tests.api.HealthCheckTest"/>
+        </classes>
+    </test>
+
+    <test name="Booking API - Authentication">
+        <classes>
+            <class name="tests.api.AuthTest"/>
+        </classes>
+    </test>
+
+    <test name="Booking API - Get All Bookings">
+        <classes>
+            <class name="tests.api.GetAllBookingTest"/>
+        </classes>
+    </test>
+
+    <test name="Booking API - Get Single Booking">
+        <classes>
+            <class name="tests.api.GetSingleBookingTest"/>
+        </classes>
+    </test>
+
+    <test name="Booking API - Full Update (PUT)">
+        <classes>
+            <class name="tests.api.UpdateBookingTest"/>
+        </classes>
+    </test>
+
+    <test name="Booking API - Partial Update (PATCH)">
+        <classes>
+            <class name="tests.api.PartialUpdateBookingTest"/>
+        </classes>
+    </test>
+
+    <test name="Booking API - Delete Booking">
+        <classes>
+            <class name="tests.api.DeleteBookingTest"/>
+        </classes>
+    </test>
+
 </suite>

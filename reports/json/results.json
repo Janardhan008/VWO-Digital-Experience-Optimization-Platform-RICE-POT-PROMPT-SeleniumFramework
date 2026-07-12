@@ -1,0 +1,2794 @@
+{
+  "config": {
+    "argv": [
+      "C:\\Program Files\\nodejs\\node.exe",
+      "D:\\Jan\\Testing Academy\\Skill\\AdvancedPlaywrightFramework\\node_modules\\@playwright\\test\\cli.js",
+      "test",
+      "--list"
+    ],
+    "configFile": "D:\\Jan\\Testing Academy\\Skill\\AdvancedPlaywrightFramework\\playwright.config.ts",
+    "rootDir": "D:/Jan/Testing Academy/Skill/AdvancedPlaywrightFramework/tests/e2e",
+    "failOnFlakyTests": false,
+    "forbidOnly": false,
+    "fullyParallel": true,
+    "globalSetup": null,
+    "globalTeardown": null,
+    "globalTimeout": 0,
+    "grep": {},
+    "grepInvert": null,
+    "maxFailures": 0,
+    "metadata": {},
+    "preserveOutput": "always",
+    "projects": [
+      {
+        "outputDir": "D:/Jan/Testing Academy/Skill/AdvancedPlaywrightFramework/test-results",
+        "repeatEach": 1,
+        "retries": 0,
+        "metadata": {},
+        "id": "setup",
+        "name": "setup",
+        "testDir": "D:/Jan/Testing Academy/Skill/AdvancedPlaywrightFramework/tests",
+        "testIgnore": [],
+        "testMatch": [
+          "/.*\\.setup\\.ts/"
+        ],
+        "timeout": 30000
+      },
+      {
+        "outputDir": "D:/Jan/Testing Academy/Skill/AdvancedPlaywrightFramework/test-results",
+        "repeatEach": 1,
+        "retries": 0,
+        "metadata": {},
+        "id": "chromium",
+        "name": "chromium",
+        "testDir": "D:/Jan/Testing Academy/Skill/AdvancedPlaywrightFramework/tests/e2e",
+        "testIgnore": [],
+        "testMatch": [
+          "**/*.@(spec|test).?(c|m)[jt]s?(x)"
+        ],
+        "timeout": 30000
+      },
+      {
+        "outputDir": "D:/Jan/Testing Academy/Skill/AdvancedPlaywrightFramework/test-results",
+        "repeatEach": 1,
+        "retries": 0,
+        "metadata": {},
+        "id": "firefox",
+        "name": "firefox",
+        "testDir": "D:/Jan/Testing Academy/Skill/AdvancedPlaywrightFramework/tests/e2e",
+        "testIgnore": [],
+        "testMatch": [
+          "**/*.@(spec|test).?(c|m)[jt]s?(x)"
+        ],
+        "timeout": 30000
+      },
+      {
+        "outputDir": "D:/Jan/Testing Academy/Skill/AdvancedPlaywrightFramework/test-results",
+        "repeatEach": 1,
+        "retries": 0,
+        "metadata": {},
+        "id": "webkit",
+        "name": "webkit",
+        "testDir": "D:/Jan/Testing Academy/Skill/AdvancedPlaywrightFramework/tests/e2e",
+        "testIgnore": [],
+        "testMatch": [
+          "**/*.@(spec|test).?(c|m)[jt]s?(x)"
+        ],
+        "timeout": 30000
+      },
+      {
+        "outputDir": "D:/Jan/Testing Academy/Skill/AdvancedPlaywrightFramework/test-results",
+        "repeatEach": 1,
+        "retries": 0,
+        "metadata": {},
+        "id": "mobile-chrome",
+        "name": "mobile-chrome",
+        "testDir": "D:/Jan/Testing Academy/Skill/AdvancedPlaywrightFramework/tests/e2e",
+        "testIgnore": [],
+        "testMatch": [
+          "**/*.@(spec|test).?(c|m)[jt]s?(x)"
+        ],
+        "timeout": 30000
+      },
+      {
+        "outputDir": "D:/Jan/Testing Academy/Skill/AdvancedPlaywrightFramework/test-results",
+        "repeatEach": 1,
+        "retries": 0,
+        "metadata": {},
+        "id": "mobile-safari",
+        "name": "mobile-safari",
+        "testDir": "D:/Jan/Testing Academy/Skill/AdvancedPlaywrightFramework/tests/e2e",
+        "testIgnore": [],
+        "testMatch": [
+          "**/*.@(spec|test).?(c|m)[jt]s?(x)"
+        ],
+        "timeout": 30000
+      }
+    ],
+    "quiet": false,
+    "reporter": [
+      [
+        "html",
+        {
+          "open": "never",
+          "outputFolder": "../reports/html"
+        }
+      ],
+      [
+        "json",
+        {
+          "outputFile": "../reports/json/results.json"
+        }
+      ],
+      [
+        "list",
+        null
+      ]
+    ],
+    "reportSlowTests": {
+      "max": 5,
+      "threshold": 300000
+    },
+    "shard": null,
+    "tags": [],
+    "updateSnapshots": "missing",
+    "updateSourceMethod": "patch",
+    "version": "1.61.1",
+    "workers": 6,
+    "webServer": {
+      "command": "npm run dev",
+      "url": "http://localhost:3000",
+      "reuseExistingServer": true,
+      "timeout": 120000
+    }
+  },
+  "suites": [
+    {
+      "title": "..\\auth.setup.ts",
+      "file": "../auth.setup.ts",
+      "column": 0,
+      "line": 0,
+      "specs": [
+        {
+          "title": "authenticate",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 30000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "setup",
+              "projectName": "setup",
+              "results": [],
+              "status": "skipped"
+            }
+          ],
+          "id": "17e3fe6f4d9d8bd79c6b-1aef690144aaba1a394d",
+          "file": "../auth.setup.ts",
+          "line": 3,
+          "column": 6
+        }
+      ]
+    },
+    {
+      "title": "auth\\login.spec.ts",
+      "file": "auth/login.spec.ts",
+      "column": 0,
+      "line": 0,
+      "specs": [],
+      "suites": [
+        {
+          "title": "Login functionality",
+          "file": "auth/login.spec.ts",
+          "line": 4,
+          "column": 6,
+          "specs": [
+            {
+              "title": "should login with valid credentials @smoke @critical",
+              "ok": true,
+              "tags": [
+                "smoke",
+                "critical"
+              ],
+              "tests": [
+                {
+                  "timeout": 30000,
+                  "annotations": [],
+                  "expectedStatus": "passed",
+                  "projectId": "chromium",
+                  "projectName": "chromium",
+                  "results": [],
+                  "status": "skipped"
+                }
+              ],
+              "id": "231ca1f0f4db3e4958c3-e16afbdd34bee040c894",
+              "file": "auth/login.spec.ts",
+              "line": 12,
+              "column": 7
+            },
+            {
+              "title": "should show error for invalid credentials",
+              "ok": true,
+              "tags": [],
+              "tests": [
+                {
+                  "timeout": 30000,
+                  "annotations": [],
+                  "expectedStatus": "passed",
+                  "projectId": "chromium",
+                  "projectName": "chromium",
+                  "results": [],
+                  "status": "skipped"
+                }
+              ],
+              "id": "231ca1f0f4db3e4958c3-0f4c0c29f9f766af5e64",
+              "file": "auth/login.spec.ts",
+              "line": 18,
+              "column": 7
+            },
+            {
+              "title": "should show error for empty email",
+              "ok": true,
+              "tags": [],
+              "tests": [
+                {
+                  "timeout": 30000,
+                  "annotations": [],
+                  "expectedStatus": "passed",
+                  "projectId": "chromium",
+                  "projectName": "chromium",
+                  "results": [],
+                  "status": "skipped"
+                }
+              ],
+              "id": "231ca1f0f4db3e4958c3-0b50f0d869080d1e17f8",
+              "file": "auth/login.spec.ts",
+              "line": 23,
+              "column": 7
+            },
+            {
+              "title": "should show error for empty password",
+              "ok": true,
+              "tags": [],
+              "tests": [
+                {
+                  "timeout": 30000,
+                  "annotations": [],
+                  "expectedStatus": "passed",
+                  "projectId": "chromium",
+                  "projectName": "chromium",
+                  "results": [],
+                  "status": "skipped"
+                }
+              ],
+              "id": "231ca1f0f4db3e4958c3-c03565e25da2ea4eba92",
+              "file": "auth/login.spec.ts",
+              "line": 28,
+              "column": 7
+            },
+            {
+              "title": "should navigate to forgot password page",
+              "ok": true,
+              "tags": [],
+              "tests": [
+                {
+                  "timeout": 30000,
+                  "annotations": [],
+                  "expectedStatus": "passed",
+                  "projectId": "chromium",
+                  "projectName": "chromium",
+                  "results": [],
+                  "status": "skipped"
+                }
+              ],
+              "id": "231ca1f0f4db3e4958c3-2dc0faf453345fefa62b",
+              "file": "auth/login.spec.ts",
+              "line": 33,
+              "column": 7
+            },
+            {
+              "title": "should login with remember me checked @regression",
+              "ok": true,
+              "tags": [
+                "regression"
+              ],
+              "tests": [
+                {
+                  "timeout": 30000,
+                  "annotations": [],
+                  "expectedStatus": "passed",
+                  "projectId": "chromium",
+                  "projectName": "chromium",
+                  "results": [],
+                  "status": "skipped"
+                }
+              ],
+              "id": "231ca1f0f4db3e4958c3-2f02558e91c914e37ade",
+              "file": "auth/login.spec.ts",
+              "line": 38,
+              "column": 7
+            },
+            {
+              "title": "should login with valid credentials @smoke @critical",
+              "ok": true,
+              "tags": [
+                "smoke",
+                "critical"
+              ],
+              "tests": [
+                {
+                  "timeout": 30000,
+                  "annotations": [],
+                  "expectedStatus": "passed",
+                  "projectId": "firefox",
+                  "projectName": "firefox",
+                  "results": [],
+                  "status": "skipped"
+                }
+              ],
+              "id": "231ca1f0f4db3e4958c3-b1d4ff9e3fde83937336",
+              "file": "auth/login.spec.ts",
+              "line": 12,
+              "column": 7
+            },
+            {
+              "title": "should show error for invalid credentials",
+              "ok": true,
+              "tags": [],
+              "tests": [
+                {
+                  "timeout": 30000,
+                  "annotations": [],
+                  "expectedStatus": "passed",
+                  "projectId": "firefox",
+                  "projectName": "firefox",
+                  "results": [],
+                  "status": "skipped"
+                }
+              ],
+              "id": "231ca1f0f4db3e4958c3-ee5f7cfe2e6be025fceb",
+              "file": "auth/login.spec.ts",
+              "line": 18,
+              "column": 7
+            },
+            {
+              "title": "should show error for empty email",
+              "ok": true,
+              "tags": [],
+              "tests": [
+                {
+                  "timeout": 30000,
+                  "annotations": [],
+                  "expectedStatus": "passed",
+                  "projectId": "firefox",
+                  "projectName": "firefox",
+                  "results": [],
+                  "status": "skipped"
+                }
+              ],
+              "id": "231ca1f0f4db3e4958c3-ec57b24927f3903bda2a",
+              "file": "auth/login.spec.ts",
+              "line": 23,
+              "column": 7
+            },
+            {
+              "title": "should show error for empty password",
+              "ok": true,
+              "tags": [],
+              "tests": [
+                {
+                  "timeout": 30000,
+                  "annotations": [],
+                  "expectedStatus": "passed",
+                  "projectId": "firefox",
+                  "projectName": "firefox",
+                  "results": [],
+                  "status": "skipped"
+                }
+              ],
+              "id": "231ca1f0f4db3e4958c3-7be241eaf2591fdb6780",
+              "file": "auth/login.spec.ts",
+              "line": 28,
+              "column": 7
+            },
+            {
+              "title": "should navigate to forgot password page",
+              "ok": true,
+              "tags": [],
+              "tests": [
+                {
+                  "timeout": 30000,
+                  "annotations": [],
+                  "expectedStatus": "passed",
+                  "projectId": "firefox",
+                  "projectName": "firefox",
+                  "results": [],
+                  "status": "skipped"
+                }
+              ],
+              "id": "231ca1f0f4db3e4958c3-91ad78ac8127d6e8db5f",
+              "file": "auth/login.spec.ts",
+              "line": 33,
+              "column": 7
+            },
+            {
+              "title": "should login with remember me checked @regression",
+              "ok": true,
+              "tags": [
+                "regression"
+              ],
+              "tests": [
+                {
+                  "timeout": 30000,
+                  "annotations": [],
+                  "expectedStatus": "passed",
+                  "projectId": "firefox",
+                  "projectName": "firefox",
+                  "results": [],
+                  "status": "skipped"
+                }
+              ],
+              "id": "231ca1f0f4db3e4958c3-3b4daea163a5b0359041",
+              "file": "auth/login.spec.ts",
+              "line": 38,
+              "column": 7
+            },
+            {
+              "title": "should login with valid credentials @smoke @critical",
+              "ok": true,
+              "tags": [
+                "smoke",
+                "critical"
+              ],
+              "tests": [
+                {
+                  "timeout": 30000,
+                  "annotations": [],
+                  "expectedStatus": "passed",
+                  "projectId": "webkit",
+                  "projectName": "webkit",
+                  "results": [],
+                  "status": "skipped"
+                }
+              ],
+              "id": "231ca1f0f4db3e4958c3-61489a9b533d35a21009",
+              "file": "auth/login.spec.ts",
+              "line": 12,
+              "column": 7
+            },
+            {
+              "title": "should show error for invalid credentials",
+              "ok": true,
+              "tags": [],
+              "tests": [
+                {
+                  "timeout": 30000,
+                  "annotations": [],
+                  "expectedStatus": "passed",
+                  "projectId": "webkit",
+                  "projectName": "webkit",
+                  "results": [],
+                  "status": "skipped"
+                }
+              ],
+              "id": "231ca1f0f4db3e4958c3-6f4509dfcfbc48bdbd05",
+              "file": "auth/login.spec.ts",
+              "line": 18,
+              "column": 7
+            },
+            {
+              "title": "should show error for empty email",
+              "ok": true,
+              "tags": [],
+              "tests": [
+                {
+                  "timeout": 30000,
+                  "annotations": [],
+                  "expectedStatus": "passed",
+                  "projectId": "webkit",
+                  "projectName": "webkit",
+                  "results": [],
+                  "status": "skipped"
+                }
+              ],
+              "id": "231ca1f0f4db3e4958c3-24e8e12a362153368e38",
+              "file": "auth/login.spec.ts",
+              "line": 23,
+              "column": 7
+            },
+            {
+              "title": "should show error for empty password",
+              "ok": true,
+              "tags": [],
+              "tests": [
+                {
+                  "timeout": 30000,
+                  "annotations": [],
+                  "expectedStatus": "passed",
+                  "projectId": "webkit",
+                  "projectName": "webkit",
+                  "results": [],
+                  "status": "skipped"
+                }
+              ],
+              "id": "231ca1f0f4db3e4958c3-149f7796e2250b19647b",
+              "file": "auth/login.spec.ts",
+              "line": 28,
+              "column": 7
+            },
+            {
+              "title": "should navigate to forgot password page",
+              "ok": true,
+              "tags": [],
+              "tests": [
+                {
+                  "timeout": 30000,
+                  "annotations": [],
+                  "expectedStatus": "passed",
+                  "projectId": "webkit",
+                  "projectName": "webkit",
+                  "results": [],
+                  "status": "skipped"
+                }
+              ],
+              "id": "231ca1f0f4db3e4958c3-a964b5bf663341e17109",
+              "file": "auth/login.spec.ts",
+              "line": 33,
+              "column": 7
+            },
+            {
+              "title": "should login with remember me checked @regression",
+              "ok": true,
+              "tags": [
+                "regression"
+              ],
+              "tests": [
+                {
+                  "timeout": 30000,
+                  "annotations": [],
+                  "expectedStatus": "passed",
+                  "projectId": "webkit",
+                  "projectName": "webkit",
+                  "results": [],
+                  "status": "skipped"
+                }
+              ],
+              "id": "231ca1f0f4db3e4958c3-23fb79c03957223a627b",
+              "file": "auth/login.spec.ts",
+              "line": 38,
+              "column": 7
+            },
+            {
+              "title": "should login with valid credentials @smoke @critical",
+              "ok": true,
+              "tags": [
+                "smoke",
+                "critical"
+              ],
+              "tests": [
+                {
+                  "timeout": 30000,
+                  "annotations": [],
+                  "expectedStatus": "passed",
+                  "projectId": "mobile-chrome",
+                  "projectName": "mobile-chrome",
+                  "results": [],
+                  "status": "skipped"
+                }
+              ],
+              "id": "231ca1f0f4db3e4958c3-75eafd9ba36db26a8e1d",
+              "file": "auth/login.spec.ts",
+              "line": 12,
+              "column": 7
+            },
+            {
+              "title": "should show error for invalid credentials",
+              "ok": true,
+              "tags": [],
+              "tests": [
+                {
+                  "timeout": 30000,
+                  "annotations": [],
+                  "expectedStatus": "passed",
+                  "projectId": "mobile-chrome",
+                  "projectName": "mobile-chrome",
+                  "results": [],
+                  "status": "skipped"
+                }
+              ],
+              "id": "231ca1f0f4db3e4958c3-63528431e95e7e33f79d",
+              "file": "auth/login.spec.ts",
+              "line": 18,
+              "column": 7
+            },
+            {
+              "title": "should show error for empty email",
+              "ok": true,
+              "tags": [],
+              "tests": [
+                {
+                  "timeout": 30000,
+                  "annotations": [],
+                  "expectedStatus": "passed",
+                  "projectId": "mobile-chrome",
+                  "projectName": "mobile-chrome",
+                  "results": [],
+                  "status": "skipped"
+                }
+              ],
+              "id": "231ca1f0f4db3e4958c3-8328968cf4a1fb30f04c",
+              "file": "auth/login.spec.ts",
+              "line": 23,
+              "column": 7
+            },
+            {
+              "title": "should show error for empty password",
+              "ok": true,
+              "tags": [],
+              "tests": [
+                {
+                  "timeout": 30000,
+                  "annotations": [],
+                  "expectedStatus": "passed",
+                  "projectId": "mobile-chrome",
+                  "projectName": "mobile-chrome",
+                  "results": [],
+                  "status": "skipped"
+                }
+              ],
+              "id": "231ca1f0f4db3e4958c3-943e1b572ece1d68e845",
+              "file": "auth/login.spec.ts",
+              "line": 28,
+              "column": 7
+            },
+            {
+              "title": "should navigate to forgot password page",
+              "ok": true,
+              "tags": [],
+              "tests": [
+                {
+                  "timeout": 30000,
+                  "annotations": [],
+                  "expectedStatus": "passed",
+                  "projectId": "mobile-chrome",
+                  "projectName": "mobile-chrome",
+                  "results": [],
+                  "status": "skipped"
+                }
+              ],
+              "id": "231ca1f0f4db3e4958c3-a7a975170f6519d16007",
+              "file": "auth/login.spec.ts",
+              "line": 33,
+              "column": 7
+            },
+            {
+              "title": "should login with remember me checked @regression",
+              "ok": true,
+              "tags": [
+                "regression"
+              ],
+              "tests": [
+                {
+                  "timeout": 30000,
+                  "annotations": [],
+                  "expectedStatus": "passed",
+                  "projectId": "mobile-chrome",
+                  "projectName": "mobile-chrome",
+                  "results": [],
+                  "status": "skipped"
+                }
+              ],
+              "id": "231ca1f0f4db3e4958c3-dce4db600a0fb237e22a",
+              "file": "auth/login.spec.ts",
+              "line": 38,
+              "column": 7
+            },
+            {
+              "title": "should login with valid credentials @smoke @critical",
+              "ok": true,
+              "tags": [
+                "smoke",
+                "critical"
+              ],
+              "tests": [
+                {
+                  "timeout": 30000,
+                  "annotations": [],
+                  "expectedStatus": "passed",
+                  "projectId": "mobile-safari",
+                  "projectName": "mobile-safari",
+                  "results": [],
+                  "status": "skipped"
+                }
+              ],
+              "id": "231ca1f0f4db3e4958c3-1a5c3c1d3d6234b81b5b",
+              "file": "auth/login.spec.ts",
+              "line": 12,
+              "column": 7
+            },
+            {
+              "title": "should show error for invalid credentials",
+              "ok": true,
+              "tags": [],
+              "tests": [
+                {
+                  "timeout": 30000,
+                  "annotations": [],
+                  "expectedStatus": "passed",
+                  "projectId": "mobile-safari",
+                  "projectName": "mobile-safari",
+                  "results": [],
+                  "status": "skipped"
+                }
+              ],
+              "id": "231ca1f0f4db3e4958c3-3862491d0c7ddbbd79aa",
+              "file": "auth/login.spec.ts",
+              "line": 18,
+              "column": 7
+            },
+            {
+              "title": "should show error for empty email",
+              "ok": true,
+              "tags": [],
+              "tests": [
+                {
+                  "timeout": 30000,
+                  "annotations": [],
+                  "expectedStatus": "passed",
+                  "projectId": "mobile-safari",
+                  "projectName": "mobile-safari",
+                  "results": [],
+                  "status": "skipped"
+                }
+              ],
+              "id": "231ca1f0f4db3e4958c3-f42fc7bf026d85ff6753",
+              "file": "auth/login.spec.ts",
+              "line": 23,
+              "column": 7
+            },
+            {
+              "title": "should show error for empty password",
+              "ok": true,
+              "tags": [],
+              "tests": [
+                {
+                  "timeout": 30000,
+                  "annotations": [],
+                  "expectedStatus": "passed",
+                  "projectId": "mobile-safari",
+                  "projectName": "mobile-safari",
+                  "results": [],
+                  "status": "skipped"
+                }
+              ],
+              "id": "231ca1f0f4db3e4958c3-d5b3d2e61175f63007da",
+              "file": "auth/login.spec.ts",
+              "line": 28,
+              "column": 7
+            },
+            {
+              "title": "should navigate to forgot password page",
+              "ok": true,
+              "tags": [],
+              "tests": [
+                {
+                  "timeout": 30000,
+                  "annotations": [],
+                  "expectedStatus": "passed",
+                  "projectId": "mobile-safari",
+                  "projectName": "mobile-safari",
+                  "results": [],
+                  "status": "skipped"
+                }
+              ],
+              "id": "231ca1f0f4db3e4958c3-a2ca5556b7f0e96bfa45",
+              "file": "auth/login.spec.ts",
+              "line": 33,
+              "column": 7
+            },
+            {
+              "title": "should login with remember me checked @regression",
+              "ok": true,
+              "tags": [
+                "regression"
+              ],
+              "tests": [
+                {
+                  "timeout": 30000,
+                  "annotations": [],
+                  "expectedStatus": "passed",
+                  "projectId": "mobile-safari",
+                  "projectName": "mobile-safari",
+                  "results": [],
+                  "status": "skipped"
+                }
+              ],
+              "id": "231ca1f0f4db3e4958c3-ffd5ed9ea90bbf6b0b6d",
+              "file": "auth/login.spec.ts",
+              "line": 38,
+              "column": 7
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "title": "auth\\signup.spec.ts",
+      "file": "auth/signup.spec.ts",
+      "column": 0,
+      "line": 0,
+      "specs": [],
+      "suites": [
+        {
+          "title": "Signup functionality",
+          "file": "auth/signup.spec.ts",
+          "line": 4,
+          "column": 6,
+          "specs": [
+            {
+              "title": "should signup with valid details @smoke",
+              "ok": true,
+              "tags": [
+                "smoke"
+              ],
+              "tests": [
+                {
+                  "timeout": 30000,
+                  "annotations": [],
+                  "expectedStatus": "passed",
+                  "projectId": "chromium",
+                  "projectName": "chromium",
+                  "results": [],
+                  "status": "skipped"
+                }
+              ],
+              "id": "c60d589c25b5f9baa21a-908dda7f95709b52e1f7",
+              "file": "auth/signup.spec.ts",
+              "line": 12,
+              "column": 7
+            },
+            {
+              "title": "should show error for existing email",
+              "ok": true,
+              "tags": [],
+              "tests": [
+                {
+                  "timeout": 30000,
+                  "annotations": [],
+                  "expectedStatus": "passed",
+                  "projectId": "chromium",
+                  "projectName": "chromium",
+                  "results": [],
+                  "status": "skipped"
+                }
+              ],
+              "id": "c60d589c25b5f9baa21a-171f9cda4dfbeabe901c",
+              "file": "auth/signup.spec.ts",
+              "line": 18,
+              "column": 7
+            },
+            {
+              "title": "should show error for weak password",
+              "ok": true,
+              "tags": [],
+              "tests": [
+                {
+                  "timeout": 30000,
+                  "annotations": [],
+                  "expectedStatus": "passed",
+                  "projectId": "chromium",
+                  "projectName": "chromium",
+                  "results": [],
+                  "status": "skipped"
+                }
+              ],
+              "id": "c60d589c25b5f9baa21a-a42e54e5533c4efca505",
+              "file": "auth/signup.spec.ts",
+              "line": 23,
+              "column": 7
+            },
+            {
+              "title": "should show error for mismatched passwords",
+              "ok": true,
+              "tags": [],
+              "tests": [
+                {
+                  "timeout": 30000,
+                  "annotations": [],
+                  "expectedStatus": "passed",
+                  "projectId": "chromium",
+                  "projectName": "chromium",
+                  "results": [],
+                  "status": "skipped"
+                }
+              ],
+              "id": "c60d589c25b5f9baa21a-fac52fa75b4026617c50",
+              "file": "auth/signup.spec.ts",
+              "line": 28,
+              "column": 7
+            },
+            {
+              "title": "should signup with valid details @smoke",
+              "ok": true,
+              "tags": [
+                "smoke"
+              ],
+              "tests": [
+                {
+                  "timeout": 30000,
+                  "annotations": [],
+                  "expectedStatus": "passed",
+                  "projectId": "firefox",
+                  "projectName": "firefox",
+                  "results": [],
+                  "status": "skipped"
+                }
+              ],
+              "id": "c60d589c25b5f9baa21a-1a9c183658b809310f18",
+              "file": "auth/signup.spec.ts",
+              "line": 12,
+              "column": 7
+            },
+            {
+              "title": "should show error for existing email",
+              "ok": true,
+              "tags": [],
+              "tests": [
+                {
+                  "timeout": 30000,
+                  "annotations": [],
+                  "expectedStatus": "passed",
+                  "projectId": "firefox",
+                  "projectName": "firefox",
+                  "results": [],
+                  "status": "skipped"
+                }
+              ],
+              "id": "c60d589c25b5f9baa21a-6388205358e18dfe343a",
+              "file": "auth/signup.spec.ts",
+              "line": 18,
+              "column": 7
+            },
+            {
+              "title": "should show error for weak password",
+              "ok": true,
+              "tags": [],
+              "tests": [
+                {
+                  "timeout": 30000,
+                  "annotations": [],
+                  "expectedStatus": "passed",
+                  "projectId": "firefox",
+                  "projectName": "firefox",
+                  "results": [],
+                  "status": "skipped"
+                }
+              ],
+              "id": "c60d589c25b5f9baa21a-2e5ef6abf609518abf43",
+              "file": "auth/signup.spec.ts",
+              "line": 23,
+              "column": 7
+            },
+            {
+              "title": "should show error for mismatched passwords",
+              "ok": true,
+              "tags": [],
+              "tests": [
+                {
+                  "timeout": 30000,
+                  "annotations": [],
+                  "expectedStatus": "passed",
+                  "projectId": "firefox",
+                  "projectName": "firefox",
+                  "results": [],
+                  "status": "skipped"
+                }
+              ],
+              "id": "c60d589c25b5f9baa21a-282dbed93d97aaadf6d9",
+              "file": "auth/signup.spec.ts",
+              "line": 28,
+              "column": 7
+            },
+            {
+              "title": "should signup with valid details @smoke",
+              "ok": true,
+              "tags": [
+                "smoke"
+              ],
+              "tests": [
+                {
+                  "timeout": 30000,
+                  "annotations": [],
+                  "expectedStatus": "passed",
+                  "projectId": "webkit",
+                  "projectName": "webkit",
+                  "results": [],
+                  "status": "skipped"
+                }
+              ],
+              "id": "c60d589c25b5f9baa21a-d8b1a61d51fedfdea256",
+              "file": "auth/signup.spec.ts",
+              "line": 12,
+              "column": 7
+            },
+            {
+              "title": "should show error for existing email",
+              "ok": true,
+              "tags": [],
+              "tests": [
+                {
+                  "timeout": 30000,
+                  "annotations": [],
+                  "expectedStatus": "passed",
+                  "projectId": "webkit",
+                  "projectName": "webkit",
+                  "results": [],
+                  "status": "skipped"
+                }
+              ],
+              "id": "c60d589c25b5f9baa21a-d294da13eceb52150297",
+              "file": "auth/signup.spec.ts",
+              "line": 18,
+              "column": 7
+            },
+            {
+              "title": "should show error for weak password",
+              "ok": true,
+              "tags": [],
+              "tests": [
+                {
+                  "timeout": 30000,
+                  "annotations": [],
+                  "expectedStatus": "passed",
+                  "projectId": "webkit",
+                  "projectName": "webkit",
+                  "results": [],
+                  "status": "skipped"
+                }
+              ],
+              "id": "c60d589c25b5f9baa21a-f320cbb6adbdb5656adc",
+              "file": "auth/signup.spec.ts",
+              "line": 23,
+              "column": 7
+            },
+            {
+              "title": "should show error for mismatched passwords",
+              "ok": true,
+              "tags": [],
+              "tests": [
+                {
+                  "timeout": 30000,
+                  "annotations": [],
+                  "expectedStatus": "passed",
+                  "projectId": "webkit",
+                  "projectName": "webkit",
+                  "results": [],
+                  "status": "skipped"
+                }
+              ],
+              "id": "c60d589c25b5f9baa21a-1188c51f0c5a4a802e9b",
+              "file": "auth/signup.spec.ts",
+              "line": 28,
+              "column": 7
+            },
+            {
+              "title": "should signup with valid details @smoke",
+              "ok": true,
+              "tags": [
+                "smoke"
+              ],
+              "tests": [
+                {
+                  "timeout": 30000,
+                  "annotations": [],
+                  "expectedStatus": "passed",
+                  "projectId": "mobile-chrome",
+                  "projectName": "mobile-chrome",
+                  "results": [],
+                  "status": "skipped"
+                }
+              ],
+              "id": "c60d589c25b5f9baa21a-9f796a446660428a5bd0",
+              "file": "auth/signup.spec.ts",
+              "line": 12,
+              "column": 7
+            },
+            {
+              "title": "should show error for existing email",
+              "ok": true,
+              "tags": [],
+              "tests": [
+                {
+                  "timeout": 30000,
+                  "annotations": [],
+                  "expectedStatus": "passed",
+                  "projectId": "mobile-chrome",
+                  "projectName": "mobile-chrome",
+                  "results": [],
+                  "status": "skipped"
+                }
+              ],
+              "id": "c60d589c25b5f9baa21a-9be8e4fe844be9a4f77e",
+              "file": "auth/signup.spec.ts",
+              "line": 18,
+              "column": 7
+            },
+            {
+              "title": "should show error for weak password",
+              "ok": true,
+              "tags": [],
+              "tests": [
+                {
+                  "timeout": 30000,
+                  "annotations": [],
+                  "expectedStatus": "passed",
+                  "projectId": "mobile-chrome",
+                  "projectName": "mobile-chrome",
+                  "results": [],
+                  "status": "skipped"
+                }
+              ],
+              "id": "c60d589c25b5f9baa21a-e6e367710b91745841f7",
+              "file": "auth/signup.spec.ts",
+              "line": 23,
+              "column": 7
+            },
+            {
+              "title": "should show error for mismatched passwords",
+              "ok": true,
+              "tags": [],
+              "tests": [
+                {
+                  "timeout": 30000,
+                  "annotations": [],
+                  "expectedStatus": "passed",
+                  "projectId": "mobile-chrome",
+                  "projectName": "mobile-chrome",
+                  "results": [],
+                  "status": "skipped"
+                }
+              ],
+              "id": "c60d589c25b5f9baa21a-6c337af89a89cc02b000",
+              "file": "auth/signup.spec.ts",
+              "line": 28,
+              "column": 7
+            },
+            {
+              "title": "should signup with valid details @smoke",
+              "ok": true,
+              "tags": [
+                "smoke"
+              ],
+              "tests": [
+                {
+                  "timeout": 30000,
+                  "annotations": [],
+                  "expectedStatus": "passed",
+                  "projectId": "mobile-safari",
+                  "projectName": "mobile-safari",
+                  "results": [],
+                  "status": "skipped"
+                }
+              ],
+              "id": "c60d589c25b5f9baa21a-333ef8d938af70a568df",
+              "file": "auth/signup.spec.ts",
+              "line": 12,
+              "column": 7
+            },
+            {
+              "title": "should show error for existing email",
+              "ok": true,
+              "tags": [],
+              "tests": [
+                {
+                  "timeout": 30000,
+                  "annotations": [],
+                  "expectedStatus": "passed",
+                  "projectId": "mobile-safari",
+                  "projectName": "mobile-safari",
+                  "results": [],
+                  "status": "skipped"
+                }
+              ],
+              "id": "c60d589c25b5f9baa21a-17c9f5ec5f3910e0baa6",
+              "file": "auth/signup.spec.ts",
+              "line": 18,
+              "column": 7
+            },
+            {
+              "title": "should show error for weak password",
+              "ok": true,
+              "tags": [],
+              "tests": [
+                {
+                  "timeout": 30000,
+                  "annotations": [],
+                  "expectedStatus": "passed",
+                  "projectId": "mobile-safari",
+                  "projectName": "mobile-safari",
+                  "results": [],
+                  "status": "skipped"
+                }
+              ],
+              "id": "c60d589c25b5f9baa21a-c8ac84b0ae053f48ca07",
+              "file": "auth/signup.spec.ts",
+              "line": 23,
+              "column": 7
+            },
+            {
+              "title": "should show error for mismatched passwords",
+              "ok": true,
+              "tags": [],
+              "tests": [
+                {
+                  "timeout": 30000,
+                  "annotations": [],
+                  "expectedStatus": "passed",
+                  "projectId": "mobile-safari",
+                  "projectName": "mobile-safari",
+                  "results": [],
+                  "status": "skipped"
+                }
+              ],
+              "id": "c60d589c25b5f9baa21a-4179d99bb16eca2290c3",
+              "file": "auth/signup.spec.ts",
+              "line": 28,
+              "column": 7
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "title": "checkout\\cart.spec.ts",
+      "file": "checkout/cart.spec.ts",
+      "column": 0,
+      "line": 0,
+      "specs": [],
+      "suites": [
+        {
+          "title": "Cart functionality",
+          "file": "checkout/cart.spec.ts",
+          "line": 5,
+          "column": 6,
+          "specs": [
+            {
+              "title": "should display empty cart message when no items @smoke",
+              "ok": true,
+              "tags": [
+                "smoke"
+              ],
+              "tests": [
+                {
+                  "timeout": 30000,
+                  "annotations": [],
+                  "expectedStatus": "passed",
+                  "projectId": "chromium",
+                  "projectName": "chromium",
+                  "results": [],
+                  "status": "skipped"
+                }
+              ],
+              "id": "53fa0b5a5aa39ac6891a-09fdd500eefba810a180",
+              "file": "checkout/cart.spec.ts",
+              "line": 16,
+              "column": 7
+            },
+            {
+              "title": "should display added items in cart @regression",
+              "ok": true,
+              "tags": [
+                "regression"
+              ],
+              "tests": [
+                {
+                  "timeout": 30000,
+                  "annotations": [],
+                  "expectedStatus": "passed",
+                  "projectId": "chromium",
+                  "projectName": "chromium",
+                  "results": [],
+                  "status": "skipped"
+                }
+              ],
+              "id": "53fa0b5a5aa39ac6891a-7b5ac06ed0faf75e8ba9",
+              "file": "checkout/cart.spec.ts",
+              "line": 21,
+              "column": 7
+            },
+            {
+              "title": "should proceed to checkout @smoke @critical",
+              "ok": true,
+              "tags": [
+                "smoke",
+                "critical"
+              ],
+              "tests": [
+                {
+                  "timeout": 30000,
+                  "annotations": [],
+                  "expectedStatus": "passed",
+                  "projectId": "chromium",
+                  "projectName": "chromium",
+                  "results": [],
+                  "status": "skipped"
+                }
+              ],
+              "id": "53fa0b5a5aa39ac6891a-0b60427db3f6ca4162e6",
+              "file": "checkout/cart.spec.ts",
+              "line": 29,
+              "column": 7
+            },
+            {
+              "title": "should remove item from cart @regression",
+              "ok": true,
+              "tags": [
+                "regression"
+              ],
+              "tests": [
+                {
+                  "timeout": 30000,
+                  "annotations": [],
+                  "expectedStatus": "passed",
+                  "projectId": "chromium",
+                  "projectName": "chromium",
+                  "results": [],
+                  "status": "skipped"
+                }
+              ],
+              "id": "53fa0b5a5aa39ac6891a-0d95911d519b3d0f7015",
+              "file": "checkout/cart.spec.ts",
+              "line": 37,
+              "column": 7
+            },
+            {
+              "title": "should update item quantity in cart",
+              "ok": true,
+              "tags": [],
+              "tests": [
+                {
+                  "timeout": 30000,
+                  "annotations": [],
+                  "expectedStatus": "passed",
+                  "projectId": "chromium",
+                  "projectName": "chromium",
+                  "results": [],
+                  "status": "skipped"
+                }
+              ],
+              "id": "53fa0b5a5aa39ac6891a-d78583c3b3ab70ce1189",
+              "file": "checkout/cart.spec.ts",
+              "line": 46,
+              "column": 7
+            },
+            {
+              "title": "should display empty cart message when no items @smoke",
+              "ok": true,
+              "tags": [
+                "smoke"
+              ],
+              "tests": [
+                {
+                  "timeout": 30000,
+                  "annotations": [],
+                  "expectedStatus": "passed",
+                  "projectId": "firefox",
+                  "projectName": "firefox",
+                  "results": [],
+                  "status": "skipped"
+                }
+              ],
+              "id": "53fa0b5a5aa39ac6891a-2151414490fcd3e92f79",
+              "file": "checkout/cart.spec.ts",
+              "line": 16,
+              "column": 7
+            },
+            {
+              "title": "should display added items in cart @regression",
+              "ok": true,
+              "tags": [
+                "regression"
+              ],
+              "tests": [
+                {
+                  "timeout": 30000,
+                  "annotations": [],
+                  "expectedStatus": "passed",
+                  "projectId": "firefox",
+                  "projectName": "firefox",
+                  "results": [],
+                  "status": "skipped"
+                }
+              ],
+              "id": "53fa0b5a5aa39ac6891a-474861577df048d40be0",
+              "file": "checkout/cart.spec.ts",
+              "line": 21,
+              "column": 7
+            },
+            {
+              "title": "should proceed to checkout @smoke @critical",
+              "ok": true,
+              "tags": [
+                "smoke",
+                "critical"
+              ],
+              "tests": [
+                {
+                  "timeout": 30000,
+                  "annotations": [],
+                  "expectedStatus": "passed",
+                  "projectId": "firefox",
+                  "projectName": "firefox",
+                  "results": [],
+                  "status": "skipped"
+                }
+              ],
+              "id": "53fa0b5a5aa39ac6891a-7a5ee7e55439a462d7fc",
+              "file": "checkout/cart.spec.ts",
+              "line": 29,
+              "column": 7
+            },
+            {
+              "title": "should remove item from cart @regression",
+              "ok": true,
+              "tags": [
+                "regression"
+              ],
+              "tests": [
+                {
+                  "timeout": 30000,
+                  "annotations": [],
+                  "expectedStatus": "passed",
+                  "projectId": "firefox",
+                  "projectName": "firefox",
+                  "results": [],
+                  "status": "skipped"
+                }
+              ],
+              "id": "53fa0b5a5aa39ac6891a-72ee01c232d16b95b884",
+              "file": "checkout/cart.spec.ts",
+              "line": 37,
+              "column": 7
+            },
+            {
+              "title": "should update item quantity in cart",
+              "ok": true,
+              "tags": [],
+              "tests": [
+                {
+                  "timeout": 30000,
+                  "annotations": [],
+                  "expectedStatus": "passed",
+                  "projectId": "firefox",
+                  "projectName": "firefox",
+                  "results": [],
+                  "status": "skipped"
+                }
+              ],
+              "id": "53fa0b5a5aa39ac6891a-76de4461e5b8837ea656",
+              "file": "checkout/cart.spec.ts",
+              "line": 46,
+              "column": 7
+            },
+            {
+              "title": "should display empty cart message when no items @smoke",
+              "ok": true,
+              "tags": [
+                "smoke"
+              ],
+              "tests": [
+                {
+                  "timeout": 30000,
+                  "annotations": [],
+                  "expectedStatus": "passed",
+                  "projectId": "webkit",
+                  "projectName": "webkit",
+                  "results": [],
+                  "status": "skipped"
+                }
+              ],
+              "id": "53fa0b5a5aa39ac6891a-8a96b900f209521987dc",
+              "file": "checkout/cart.spec.ts",
+              "line": 16,
+              "column": 7
+            },
+            {
+              "title": "should display added items in cart @regression",
+              "ok": true,
+              "tags": [
+                "regression"
+              ],
+              "tests": [
+                {
+                  "timeout": 30000,
+                  "annotations": [],
+                  "expectedStatus": "passed",
+                  "projectId": "webkit",
+                  "projectName": "webkit",
+                  "results": [],
+                  "status": "skipped"
+                }
+              ],
+              "id": "53fa0b5a5aa39ac6891a-d42c4364e2dce1ec08e8",
+              "file": "checkout/cart.spec.ts",
+              "line": 21,
+              "column": 7
+            },
+            {
+              "title": "should proceed to checkout @smoke @critical",
+              "ok": true,
+              "tags": [
+                "smoke",
+                "critical"
+              ],
+              "tests": [
+                {
+                  "timeout": 30000,
+                  "annotations": [],
+                  "expectedStatus": "passed",
+                  "projectId": "webkit",
+                  "projectName": "webkit",
+                  "results": [],
+                  "status": "skipped"
+                }
+              ],
+              "id": "53fa0b5a5aa39ac6891a-77a99b987358243e88d6",
+              "file": "checkout/cart.spec.ts",
+              "line": 29,
+              "column": 7
+            },
+            {
+              "title": "should remove item from cart @regression",
+              "ok": true,
+              "tags": [
+                "regression"
+              ],
+              "tests": [
+                {
+                  "timeout": 30000,
+                  "annotations": [],
+                  "expectedStatus": "passed",
+                  "projectId": "webkit",
+                  "projectName": "webkit",
+                  "results": [],
+                  "status": "skipped"
+                }
+              ],
+              "id": "53fa0b5a5aa39ac6891a-d68cfb5b958b260230d2",
+              "file": "checkout/cart.spec.ts",
+              "line": 37,
+              "column": 7
+            },
+            {
+              "title": "should update item quantity in cart",
+              "ok": true,
+              "tags": [],
+              "tests": [
+                {
+                  "timeout": 30000,
+                  "annotations": [],
+                  "expectedStatus": "passed",
+                  "projectId": "webkit",
+                  "projectName": "webkit",
+                  "results": [],
+                  "status": "skipped"
+                }
+              ],
+              "id": "53fa0b5a5aa39ac6891a-0c885c873fcaf68f6924",
+              "file": "checkout/cart.spec.ts",
+              "line": 46,
+              "column": 7
+            },
+            {
+              "title": "should display empty cart message when no items @smoke",
+              "ok": true,
+              "tags": [
+                "smoke"
+              ],
+              "tests": [
+                {
+                  "timeout": 30000,
+                  "annotations": [],
+                  "expectedStatus": "passed",
+                  "projectId": "mobile-chrome",
+                  "projectName": "mobile-chrome",
+                  "results": [],
+                  "status": "skipped"
+                }
+              ],
+              "id": "53fa0b5a5aa39ac6891a-169df1cb617ca098219d",
+              "file": "checkout/cart.spec.ts",
+              "line": 16,
+              "column": 7
+            },
+            {
+              "title": "should display added items in cart @regression",
+              "ok": true,
+              "tags": [
+                "regression"
+              ],
+              "tests": [
+                {
+                  "timeout": 30000,
+                  "annotations": [],
+                  "expectedStatus": "passed",
+                  "projectId": "mobile-chrome",
+                  "projectName": "mobile-chrome",
+                  "results": [],
+                  "status": "skipped"
+                }
+              ],
+              "id": "53fa0b5a5aa39ac6891a-98249e2ac5b42b2b88f7",
+              "file": "checkout/cart.spec.ts",
+              "line": 21,
+              "column": 7
+            },
+            {
+              "title": "should proceed to checkout @smoke @critical",
+              "ok": true,
+              "tags": [
+                "smoke",
+                "critical"
+              ],
+              "tests": [
+                {
+                  "timeout": 30000,
+                  "annotations": [],
+                  "expectedStatus": "passed",
+                  "projectId": "mobile-chrome",
+                  "projectName": "mobile-chrome",
+                  "results": [],
+                  "status": "skipped"
+                }
+              ],
+              "id": "53fa0b5a5aa39ac6891a-edaf6cecd952a8c54508",
+              "file": "checkout/cart.spec.ts",
+              "line": 29,
+              "column": 7
+            },
+            {
+              "title": "should remove item from cart @regression",
+              "ok": true,
+              "tags": [
+                "regression"
+              ],
+              "tests": [
+                {
+                  "timeout": 30000,
+                  "annotations": [],
+                  "expectedStatus": "passed",
+                  "projectId": "mobile-chrome",
+                  "projectName": "mobile-chrome",
+                  "results": [],
+                  "status": "skipped"
+                }
+              ],
+              "id": "53fa0b5a5aa39ac6891a-637df7aaa9f7ad56f645",
+              "file": "checkout/cart.spec.ts",
+              "line": 37,
+              "column": 7
+            },
+            {
+              "title": "should update item quantity in cart",
+              "ok": true,
+              "tags": [],
+              "tests": [
+                {
+                  "timeout": 30000,
+                  "annotations": [],
+                  "expectedStatus": "passed",
+                  "projectId": "mobile-chrome",
+                  "projectName": "mobile-chrome",
+                  "results": [],
+                  "status": "skipped"
+                }
+              ],
+              "id": "53fa0b5a5aa39ac6891a-ea7d2cfb150bfd5e47bf",
+              "file": "checkout/cart.spec.ts",
+              "line": 46,
+              "column": 7
+            },
+            {
+              "title": "should display empty cart message when no items @smoke",
+              "ok": true,
+              "tags": [
+                "smoke"
+              ],
+              "tests": [
+                {
+                  "timeout": 30000,
+                  "annotations": [],
+                  "expectedStatus": "passed",
+                  "projectId": "mobile-safari",
+                  "projectName": "mobile-safari",
+                  "results": [],
+                  "status": "skipped"
+                }
+              ],
+              "id": "53fa0b5a5aa39ac6891a-5e4d9880742a37ce158c",
+              "file": "checkout/cart.spec.ts",
+              "line": 16,
+              "column": 7
+            },
+            {
+              "title": "should display added items in cart @regression",
+              "ok": true,
+              "tags": [
+                "regression"
+              ],
+              "tests": [
+                {
+                  "timeout": 30000,
+                  "annotations": [],
+                  "expectedStatus": "passed",
+                  "projectId": "mobile-safari",
+                  "projectName": "mobile-safari",
+                  "results": [],
+                  "status": "skipped"
+                }
+              ],
+              "id": "53fa0b5a5aa39ac6891a-0b74d30c9aa0b56e2139",
+              "file": "checkout/cart.spec.ts",
+              "line": 21,
+              "column": 7
+            },
+            {
+              "title": "should proceed to checkout @smoke @critical",
+              "ok": true,
+              "tags": [
+                "smoke",
+                "critical"
+              ],
+              "tests": [
+                {
+                  "timeout": 30000,
+                  "annotations": [],
+                  "expectedStatus": "passed",
+                  "projectId": "mobile-safari",
+                  "projectName": "mobile-safari",
+                  "results": [],
+                  "status": "skipped"
+                }
+              ],
+              "id": "53fa0b5a5aa39ac6891a-44dfaa637bac15019bf5",
+              "file": "checkout/cart.spec.ts",
+              "line": 29,
+              "column": 7
+            },
+            {
+              "title": "should remove item from cart @regression",
+              "ok": true,
+              "tags": [
+                "regression"
+              ],
+              "tests": [
+                {
+                  "timeout": 30000,
+                  "annotations": [],
+                  "expectedStatus": "passed",
+                  "projectId": "mobile-safari",
+                  "projectName": "mobile-safari",
+                  "results": [],
+                  "status": "skipped"
+                }
+              ],
+              "id": "53fa0b5a5aa39ac6891a-889d5cf63e85d2a02b86",
+              "file": "checkout/cart.spec.ts",
+              "line": 37,
+              "column": 7
+            },
+            {
+              "title": "should update item quantity in cart",
+              "ok": true,
+              "tags": [],
+              "tests": [
+                {
+                  "timeout": 30000,
+                  "annotations": [],
+                  "expectedStatus": "passed",
+                  "projectId": "mobile-safari",
+                  "projectName": "mobile-safari",
+                  "results": [],
+                  "status": "skipped"
+                }
+              ],
+              "id": "53fa0b5a5aa39ac6891a-3475d52cd30d183ad989",
+              "file": "checkout/cart.spec.ts",
+              "line": 46,
+              "column": 7
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "title": "checkout\\payment.spec.ts",
+      "file": "checkout/payment.spec.ts",
+      "column": 0,
+      "line": 0,
+      "specs": [],
+      "suites": [
+        {
+          "title": "Payment functionality",
+          "file": "checkout/payment.spec.ts",
+          "line": 6,
+          "column": 6,
+          "specs": [
+            {
+              "title": "should process payment with valid card @smoke @critical",
+              "ok": true,
+              "tags": [
+                "smoke",
+                "critical"
+              ],
+              "tests": [
+                {
+                  "timeout": 30000,
+                  "annotations": [],
+                  "expectedStatus": "passed",
+                  "projectId": "chromium",
+                  "projectName": "chromium",
+                  "results": [],
+                  "status": "skipped"
+                }
+              ],
+              "id": "53e2ac8dd9282eb8e198-272f19fb80323319b5b8",
+              "file": "checkout/payment.spec.ts",
+              "line": 22,
+              "column": 7
+            },
+            {
+              "title": "should process payment with iframe card element",
+              "ok": true,
+              "tags": [],
+              "tests": [
+                {
+                  "timeout": 30000,
+                  "annotations": [],
+                  "expectedStatus": "passed",
+                  "projectId": "chromium",
+                  "projectName": "chromium",
+                  "results": [],
+                  "status": "skipped"
+                }
+              ],
+              "id": "53e2ac8dd9282eb8e198-23c583c676dfd05f1651",
+              "file": "checkout/payment.spec.ts",
+              "line": 29,
+              "column": 7
+            },
+            {
+              "title": "should show error for expired card @regression",
+              "ok": true,
+              "tags": [
+                "regression"
+              ],
+              "tests": [
+                {
+                  "timeout": 30000,
+                  "annotations": [],
+                  "expectedStatus": "passed",
+                  "projectId": "chromium",
+                  "projectName": "chromium",
+                  "results": [],
+                  "status": "skipped"
+                }
+              ],
+              "id": "53e2ac8dd9282eb8e198-418abe60bb1206a0b647",
+              "file": "checkout/payment.spec.ts",
+              "line": 35,
+              "column": 7
+            },
+            {
+              "title": "should show error for invalid card number",
+              "ok": true,
+              "tags": [],
+              "tests": [
+                {
+                  "timeout": 30000,
+                  "annotations": [],
+                  "expectedStatus": "passed",
+                  "projectId": "chromium",
+                  "projectName": "chromium",
+                  "results": [],
+                  "status": "skipped"
+                }
+              ],
+              "id": "53e2ac8dd9282eb8e198-74c455f08c984ff2bc66",
+              "file": "checkout/payment.spec.ts",
+              "line": 41,
+              "column": 7
+            },
+            {
+              "title": "should show error for declined payment",
+              "ok": true,
+              "tags": [],
+              "tests": [
+                {
+                  "timeout": 30000,
+                  "annotations": [],
+                  "expectedStatus": "passed",
+                  "projectId": "chromium",
+                  "projectName": "chromium",
+                  "results": [],
+                  "status": "skipped"
+                }
+              ],
+              "id": "53e2ac8dd9282eb8e198-93796938fa8f53bc46e3",
+              "file": "checkout/payment.spec.ts",
+              "line": 47,
+              "column": 7
+            },
+            {
+              "title": "should process payment with valid card @smoke @critical",
+              "ok": true,
+              "tags": [
+                "smoke",
+                "critical"
+              ],
+              "tests": [
+                {
+                  "timeout": 30000,
+                  "annotations": [],
+                  "expectedStatus": "passed",
+                  "projectId": "firefox",
+                  "projectName": "firefox",
+                  "results": [],
+                  "status": "skipped"
+                }
+              ],
+              "id": "53e2ac8dd9282eb8e198-84b2cb2a56ffdf971c00",
+              "file": "checkout/payment.spec.ts",
+              "line": 22,
+              "column": 7
+            },
+            {
+              "title": "should process payment with iframe card element",
+              "ok": true,
+              "tags": [],
+              "tests": [
+                {
+                  "timeout": 30000,
+                  "annotations": [],
+                  "expectedStatus": "passed",
+                  "projectId": "firefox",
+                  "projectName": "firefox",
+                  "results": [],
+                  "status": "skipped"
+                }
+              ],
+              "id": "53e2ac8dd9282eb8e198-3f36d26ff8b532b73896",
+              "file": "checkout/payment.spec.ts",
+              "line": 29,
+              "column": 7
+            },
+            {
+              "title": "should show error for expired card @regression",
+              "ok": true,
+              "tags": [
+                "regression"
+              ],
+              "tests": [
+                {
+                  "timeout": 30000,
+                  "annotations": [],
+                  "expectedStatus": "passed",
+                  "projectId": "firefox",
+                  "projectName": "firefox",
+                  "results": [],
+                  "status": "skipped"
+                }
+              ],
+              "id": "53e2ac8dd9282eb8e198-0f4dedc9302a58a9634a",
+              "file": "checkout/payment.spec.ts",
+              "line": 35,
+              "column": 7
+            },
+            {
+              "title": "should show error for invalid card number",
+              "ok": true,
+              "tags": [],
+              "tests": [
+                {
+                  "timeout": 30000,
+                  "annotations": [],
+                  "expectedStatus": "passed",
+                  "projectId": "firefox",
+                  "projectName": "firefox",
+                  "results": [],
+                  "status": "skipped"
+                }
+              ],
+              "id": "53e2ac8dd9282eb8e198-3600f5a38d81015c9978",
+              "file": "checkout/payment.spec.ts",
+              "line": 41,
+              "column": 7
+            },
+            {
+              "title": "should show error for declined payment",
+              "ok": true,
+              "tags": [],
+              "tests": [
+                {
+                  "timeout": 30000,
+                  "annotations": [],
+                  "expectedStatus": "passed",
+                  "projectId": "firefox",
+                  "projectName": "firefox",
+                  "results": [],
+                  "status": "skipped"
+                }
+              ],
+              "id": "53e2ac8dd9282eb8e198-c26c07d629ea15003483",
+              "file": "checkout/payment.spec.ts",
+              "line": 47,
+              "column": 7
+            },
+            {
+              "title": "should process payment with valid card @smoke @critical",
+              "ok": true,
+              "tags": [
+                "smoke",
+                "critical"
+              ],
+              "tests": [
+                {
+                  "timeout": 30000,
+                  "annotations": [],
+                  "expectedStatus": "passed",
+                  "projectId": "webkit",
+                  "projectName": "webkit",
+                  "results": [],
+                  "status": "skipped"
+                }
+              ],
+              "id": "53e2ac8dd9282eb8e198-be2169e643bb0a3bf1d4",
+              "file": "checkout/payment.spec.ts",
+              "line": 22,
+              "column": 7
+            },
+            {
+              "title": "should process payment with iframe card element",
+              "ok": true,
+              "tags": [],
+              "tests": [
+                {
+                  "timeout": 30000,
+                  "annotations": [],
+                  "expectedStatus": "passed",
+                  "projectId": "webkit",
+                  "projectName": "webkit",
+                  "results": [],
+                  "status": "skipped"
+                }
+              ],
+              "id": "53e2ac8dd9282eb8e198-db4f404bd375057ab6f5",
+              "file": "checkout/payment.spec.ts",
+              "line": 29,
+              "column": 7
+            },
+            {
+              "title": "should show error for expired card @regression",
+              "ok": true,
+              "tags": [
+                "regression"
+              ],
+              "tests": [
+                {
+                  "timeout": 30000,
+                  "annotations": [],
+                  "expectedStatus": "passed",
+                  "projectId": "webkit",
+                  "projectName": "webkit",
+                  "results": [],
+                  "status": "skipped"
+                }
+              ],
+              "id": "53e2ac8dd9282eb8e198-b446b3567d8ca2cfd54e",
+              "file": "checkout/payment.spec.ts",
+              "line": 35,
+              "column": 7
+            },
+            {
+              "title": "should show error for invalid card number",
+              "ok": true,
+              "tags": [],
+              "tests": [
+                {
+                  "timeout": 30000,
+                  "annotations": [],
+                  "expectedStatus": "passed",
+                  "projectId": "webkit",
+                  "projectName": "webkit",
+                  "results": [],
+                  "status": "skipped"
+                }
+              ],
+              "id": "53e2ac8dd9282eb8e198-d0b54f204841afcef3d3",
+              "file": "checkout/payment.spec.ts",
+              "line": 41,
+              "column": 7
+            },
+            {
+              "title": "should show error for declined payment",
+              "ok": true,
+              "tags": [],
+              "tests": [
+                {
+                  "timeout": 30000,
+                  "annotations": [],
+                  "expectedStatus": "passed",
+                  "projectId": "webkit",
+                  "projectName": "webkit",
+                  "results": [],
+                  "status": "skipped"
+                }
+              ],
+              "id": "53e2ac8dd9282eb8e198-b88442955796fd777eb6",
+              "file": "checkout/payment.spec.ts",
+              "line": 47,
+              "column": 7
+            },
+            {
+              "title": "should process payment with valid card @smoke @critical",
+              "ok": true,
+              "tags": [
+                "smoke",
+                "critical"
+              ],
+              "tests": [
+                {
+                  "timeout": 30000,
+                  "annotations": [],
+                  "expectedStatus": "passed",
+                  "projectId": "mobile-chrome",
+                  "projectName": "mobile-chrome",
+                  "results": [],
+                  "status": "skipped"
+                }
+              ],
+              "id": "53e2ac8dd9282eb8e198-fffea824d5ba564ed43a",
+              "file": "checkout/payment.spec.ts",
+              "line": 22,
+              "column": 7
+            },
+            {
+              "title": "should process payment with iframe card element",
+              "ok": true,
+              "tags": [],
+              "tests": [
+                {
+                  "timeout": 30000,
+                  "annotations": [],
+                  "expectedStatus": "passed",
+                  "projectId": "mobile-chrome",
+                  "projectName": "mobile-chrome",
+                  "results": [],
+                  "status": "skipped"
+                }
+              ],
+              "id": "53e2ac8dd9282eb8e198-7ce9b73031aee73b3d85",
+              "file": "checkout/payment.spec.ts",
+              "line": 29,
+              "column": 7
+            },
+            {
+              "title": "should show error for expired card @regression",
+              "ok": true,
+              "tags": [
+                "regression"
+              ],
+              "tests": [
+                {
+                  "timeout": 30000,
+                  "annotations": [],
+                  "expectedStatus": "passed",
+                  "projectId": "mobile-chrome",
+                  "projectName": "mobile-chrome",
+                  "results": [],
+                  "status": "skipped"
+                }
+              ],
+              "id": "53e2ac8dd9282eb8e198-33ca877c8f32c77a6a1c",
+              "file": "checkout/payment.spec.ts",
+              "line": 35,
+              "column": 7
+            },
+            {
+              "title": "should show error for invalid card number",
+              "ok": true,
+              "tags": [],
+              "tests": [
+                {
+                  "timeout": 30000,
+                  "annotations": [],
+                  "expectedStatus": "passed",
+                  "projectId": "mobile-chrome",
+                  "projectName": "mobile-chrome",
+                  "results": [],
+                  "status": "skipped"
+                }
+              ],
+              "id": "53e2ac8dd9282eb8e198-502ebc3c6332cd821a9c",
+              "file": "checkout/payment.spec.ts",
+              "line": 41,
+              "column": 7
+            },
+            {
+              "title": "should show error for declined payment",
+              "ok": true,
+              "tags": [],
+              "tests": [
+                {
+                  "timeout": 30000,
+                  "annotations": [],
+                  "expectedStatus": "passed",
+                  "projectId": "mobile-chrome",
+                  "projectName": "mobile-chrome",
+                  "results": [],
+                  "status": "skipped"
+                }
+              ],
+              "id": "53e2ac8dd9282eb8e198-2d0c0f2e95e88be36387",
+              "file": "checkout/payment.spec.ts",
+              "line": 47,
+              "column": 7
+            },
+            {
+              "title": "should process payment with valid card @smoke @critical",
+              "ok": true,
+              "tags": [
+                "smoke",
+                "critical"
+              ],
+              "tests": [
+                {
+                  "timeout": 30000,
+                  "annotations": [],
+                  "expectedStatus": "passed",
+                  "projectId": "mobile-safari",
+                  "projectName": "mobile-safari",
+                  "results": [],
+                  "status": "skipped"
+                }
+              ],
+              "id": "53e2ac8dd9282eb8e198-0878a5e55419b51afc84",
+              "file": "checkout/payment.spec.ts",
+              "line": 22,
+              "column": 7
+            },
+            {
+              "title": "should process payment with iframe card element",
+              "ok": true,
+              "tags": [],
+              "tests": [
+                {
+                  "timeout": 30000,
+                  "annotations": [],
+                  "expectedStatus": "passed",
+                  "projectId": "mobile-safari",
+                  "projectName": "mobile-safari",
+                  "results": [],
+                  "status": "skipped"
+                }
+              ],
+              "id": "53e2ac8dd9282eb8e198-4ba3d806e094758b1c5b",
+              "file": "checkout/payment.spec.ts",
+              "line": 29,
+              "column": 7
+            },
+            {
+              "title": "should show error for expired card @regression",
+              "ok": true,
+              "tags": [
+                "regression"
+              ],
+              "tests": [
+                {
+                  "timeout": 30000,
+                  "annotations": [],
+                  "expectedStatus": "passed",
+                  "projectId": "mobile-safari",
+                  "projectName": "mobile-safari",
+                  "results": [],
+                  "status": "skipped"
+                }
+              ],
+              "id": "53e2ac8dd9282eb8e198-c666fe41c3db1ce836e5",
+              "file": "checkout/payment.spec.ts",
+              "line": 35,
+              "column": 7
+            },
+            {
+              "title": "should show error for invalid card number",
+              "ok": true,
+              "tags": [],
+              "tests": [
+                {
+                  "timeout": 30000,
+                  "annotations": [],
+                  "expectedStatus": "passed",
+                  "projectId": "mobile-safari",
+                  "projectName": "mobile-safari",
+                  "results": [],
+                  "status": "skipped"
+                }
+              ],
+              "id": "53e2ac8dd9282eb8e198-7439228b1b178dc0ac52",
+              "file": "checkout/payment.spec.ts",
+              "line": 41,
+              "column": 7
+            },
+            {
+              "title": "should show error for declined payment",
+              "ok": true,
+              "tags": [],
+              "tests": [
+                {
+                  "timeout": 30000,
+                  "annotations": [],
+                  "expectedStatus": "passed",
+                  "projectId": "mobile-safari",
+                  "projectName": "mobile-safari",
+                  "results": [],
+                  "status": "skipped"
+                }
+              ],
+              "id": "53e2ac8dd9282eb8e198-01f2b8fcaf0b17f67bfb",
+              "file": "checkout/payment.spec.ts",
+              "line": 47,
+              "column": 7
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "title": "dashboard\\dashboard.spec.ts",
+      "file": "dashboard/dashboard.spec.ts",
+      "column": 0,
+      "line": 0,
+      "specs": [],
+      "suites": [
+        {
+          "title": "Dashboard functionality",
+          "file": "dashboard/dashboard.spec.ts",
+          "line": 4,
+          "column": 6,
+          "specs": [
+            {
+              "title": "should display welcome message @smoke",
+              "ok": true,
+              "tags": [
+                "smoke"
+              ],
+              "tests": [
+                {
+                  "timeout": 30000,
+                  "annotations": [],
+                  "expectedStatus": "passed",
+                  "projectId": "chromium",
+                  "projectName": "chromium",
+                  "results": [],
+                  "status": "skipped"
+                }
+              ],
+              "id": "747340cde928aa6c3216-b8347d24f66d0cd72849",
+              "file": "dashboard/dashboard.spec.ts",
+              "line": 16,
+              "column": 7
+            },
+            {
+              "title": "should display all dashboard widgets @regression",
+              "ok": true,
+              "tags": [
+                "regression"
+              ],
+              "tests": [
+                {
+                  "timeout": 30000,
+                  "annotations": [],
+                  "expectedStatus": "passed",
+                  "projectId": "chromium",
+                  "projectName": "chromium",
+                  "results": [],
+                  "status": "skipped"
+                }
+              ],
+              "id": "747340cde928aa6c3216-c9c245b3eb00ab86d99b",
+              "file": "dashboard/dashboard.spec.ts",
+              "line": 20,
+              "column": 7
+            },
+            {
+              "title": "should logout successfully",
+              "ok": true,
+              "tags": [],
+              "tests": [
+                {
+                  "timeout": 30000,
+                  "annotations": [],
+                  "expectedStatus": "passed",
+                  "projectId": "chromium",
+                  "projectName": "chromium",
+                  "results": [],
+                  "status": "skipped"
+                }
+              ],
+              "id": "747340cde928aa6c3216-bc6eace9245ff578a5c6",
+              "file": "dashboard/dashboard.spec.ts",
+              "line": 26,
+              "column": 7
+            },
+            {
+              "title": "should navigate to profile from dashboard",
+              "ok": true,
+              "tags": [],
+              "tests": [
+                {
+                  "timeout": 30000,
+                  "annotations": [],
+                  "expectedStatus": "passed",
+                  "projectId": "chromium",
+                  "projectName": "chromium",
+                  "results": [],
+                  "status": "skipped"
+                }
+              ],
+              "id": "747340cde928aa6c3216-74b1407d8aa0120aacf7",
+              "file": "dashboard/dashboard.spec.ts",
+              "line": 31,
+              "column": 7
+            },
+            {
+              "title": "should display welcome message @smoke",
+              "ok": true,
+              "tags": [
+                "smoke"
+              ],
+              "tests": [
+                {
+                  "timeout": 30000,
+                  "annotations": [],
+                  "expectedStatus": "passed",
+                  "projectId": "firefox",
+                  "projectName": "firefox",
+                  "results": [],
+                  "status": "skipped"
+                }
+              ],
+              "id": "747340cde928aa6c3216-bc25da28a66e9394021b",
+              "file": "dashboard/dashboard.spec.ts",
+              "line": 16,
+              "column": 7
+            },
+            {
+              "title": "should display all dashboard widgets @regression",
+              "ok": true,
+              "tags": [
+                "regression"
+              ],
+              "tests": [
+                {
+                  "timeout": 30000,
+                  "annotations": [],
+                  "expectedStatus": "passed",
+                  "projectId": "firefox",
+                  "projectName": "firefox",
+                  "results": [],
+                  "status": "skipped"
+                }
+              ],
+              "id": "747340cde928aa6c3216-e2aaabe7fd033c4d9c27",
+              "file": "dashboard/dashboard.spec.ts",
+              "line": 20,
+              "column": 7
+            },
+            {
+              "title": "should logout successfully",
+              "ok": true,
+              "tags": [],
+              "tests": [
+                {
+                  "timeout": 30000,
+                  "annotations": [],
+                  "expectedStatus": "passed",
+                  "projectId": "firefox",
+                  "projectName": "firefox",
+                  "results": [],
+                  "status": "skipped"
+                }
+              ],
+              "id": "747340cde928aa6c3216-0d9f22447890dca87567",
+              "file": "dashboard/dashboard.spec.ts",
+              "line": 26,
+              "column": 7
+            },
+            {
+              "title": "should navigate to profile from dashboard",
+              "ok": true,
+              "tags": [],
+              "tests": [
+                {
+                  "timeout": 30000,
+                  "annotations": [],
+                  "expectedStatus": "passed",
+                  "projectId": "firefox",
+                  "projectName": "firefox",
+                  "results": [],
+                  "status": "skipped"
+                }
+              ],
+              "id": "747340cde928aa6c3216-23cda2822e821869e678",
+              "file": "dashboard/dashboard.spec.ts",
+              "line": 31,
+              "column": 7
+            },
+            {
+              "title": "should display welcome message @smoke",
+              "ok": true,
+              "tags": [
+                "smoke"
+              ],
+              "tests": [
+                {
+                  "timeout": 30000,
+                  "annotations": [],
+                  "expectedStatus": "passed",
+                  "projectId": "webkit",
+                  "projectName": "webkit",
+                  "results": [],
+                  "status": "skipped"
+                }
+              ],
+              "id": "747340cde928aa6c3216-9c44cf4e1ddf371a1074",
+              "file": "dashboard/dashboard.spec.ts",
+              "line": 16,
+              "column": 7
+            },
+            {
+              "title": "should display all dashboard widgets @regression",
+              "ok": true,
+              "tags": [
+                "regression"
+              ],
+              "tests": [
+                {
+                  "timeout": 30000,
+                  "annotations": [],
+                  "expectedStatus": "passed",
+                  "projectId": "webkit",
+                  "projectName": "webkit",
+                  "results": [],
+                  "status": "skipped"
+                }
+              ],
+              "id": "747340cde928aa6c3216-79d123219918e33e0a5a",
+              "file": "dashboard/dashboard.spec.ts",
+              "line": 20,
+              "column": 7
+            },
+            {
+              "title": "should logout successfully",
+              "ok": true,
+              "tags": [],
+              "tests": [
+                {
+                  "timeout": 30000,
+                  "annotations": [],
+                  "expectedStatus": "passed",
+                  "projectId": "webkit",
+                  "projectName": "webkit",
+                  "results": [],
+                  "status": "skipped"
+                }
+              ],
+              "id": "747340cde928aa6c3216-82572dd011c656875180",
+              "file": "dashboard/dashboard.spec.ts",
+              "line": 26,
+              "column": 7
+            },
+            {
+              "title": "should navigate to profile from dashboard",
+              "ok": true,
+              "tags": [],
+              "tests": [
+                {
+                  "timeout": 30000,
+                  "annotations": [],
+                  "expectedStatus": "passed",
+                  "projectId": "webkit",
+                  "projectName": "webkit",
+                  "results": [],
+                  "status": "skipped"
+                }
+              ],
+              "id": "747340cde928aa6c3216-27314c23638238824352",
+              "file": "dashboard/dashboard.spec.ts",
+              "line": 31,
+              "column": 7
+            },
+            {
+              "title": "should display welcome message @smoke",
+              "ok": true,
+              "tags": [
+                "smoke"
+              ],
+              "tests": [
+                {
+                  "timeout": 30000,
+                  "annotations": [],
+                  "expectedStatus": "passed",
+                  "projectId": "mobile-chrome",
+                  "projectName": "mobile-chrome",
+                  "results": [],
+                  "status": "skipped"
+                }
+              ],
+              "id": "747340cde928aa6c3216-2dd06b87945e51324b8d",
+              "file": "dashboard/dashboard.spec.ts",
+              "line": 16,
+              "column": 7
+            },
+            {
+              "title": "should display all dashboard widgets @regression",
+              "ok": true,
+              "tags": [
+                "regression"
+              ],
+              "tests": [
+                {
+                  "timeout": 30000,
+                  "annotations": [],
+                  "expectedStatus": "passed",
+                  "projectId": "mobile-chrome",
+                  "projectName": "mobile-chrome",
+                  "results": [],
+                  "status": "skipped"
+                }
+              ],
+              "id": "747340cde928aa6c3216-d912b1a81862c22aaaf0",
+              "file": "dashboard/dashboard.spec.ts",
+              "line": 20,
+              "column": 7
+            },
+            {
+              "title": "should logout successfully",
+              "ok": true,
+              "tags": [],
+              "tests": [
+                {
+                  "timeout": 30000,
+                  "annotations": [],
+                  "expectedStatus": "passed",
+                  "projectId": "mobile-chrome",
+                  "projectName": "mobile-chrome",
+                  "results": [],
+                  "status": "skipped"
+                }
+              ],
+              "id": "747340cde928aa6c3216-b8d93d97ccc41379c8f9",
+              "file": "dashboard/dashboard.spec.ts",
+              "line": 26,
+              "column": 7
+            },
+            {
+              "title": "should navigate to profile from dashboard",
+              "ok": true,
+              "tags": [],
+              "tests": [
+                {
+                  "timeout": 30000,
+                  "annotations": [],
+                  "expectedStatus": "passed",
+                  "projectId": "mobile-chrome",
+                  "projectName": "mobile-chrome",
+                  "results": [],
+                  "status": "skipped"
+                }
+              ],
+              "id": "747340cde928aa6c3216-b01990cadf7e53c0d504",
+              "file": "dashboard/dashboard.spec.ts",
+              "line": 31,
+              "column": 7
+            },
+            {
+              "title": "should display welcome message @smoke",
+              "ok": true,
+              "tags": [
+                "smoke"
+              ],
+              "tests": [
+                {
+                  "timeout": 30000,
+                  "annotations": [],
+                  "expectedStatus": "passed",
+                  "projectId": "mobile-safari",
+                  "projectName": "mobile-safari",
+                  "results": [],
+                  "status": "skipped"
+                }
+              ],
+              "id": "747340cde928aa6c3216-96ba42f37458fad6ed2a",
+              "file": "dashboard/dashboard.spec.ts",
+              "line": 16,
+              "column": 7
+            },
+            {
+              "title": "should display all dashboard widgets @regression",
+              "ok": true,
+              "tags": [
+                "regression"
+              ],
+              "tests": [
+                {
+                  "timeout": 30000,
+                  "annotations": [],
+                  "expectedStatus": "passed",
+                  "projectId": "mobile-safari",
+                  "projectName": "mobile-safari",
+                  "results": [],
+                  "status": "skipped"
+                }
+              ],
+              "id": "747340cde928aa6c3216-ca9a722061d855cd2efb",
+              "file": "dashboard/dashboard.spec.ts",
+              "line": 20,
+              "column": 7
+            },
+            {
+              "title": "should logout successfully",
+              "ok": true,
+              "tags": [],
+              "tests": [
+                {
+                  "timeout": 30000,
+                  "annotations": [],
+                  "expectedStatus": "passed",
+                  "projectId": "mobile-safari",
+                  "projectName": "mobile-safari",
+                  "results": [],
+                  "status": "skipped"
+                }
+              ],
+              "id": "747340cde928aa6c3216-138aec4faa6fe1ef79a9",
+              "file": "dashboard/dashboard.spec.ts",
+              "line": 26,
+              "column": 7
+            },
+            {
+              "title": "should navigate to profile from dashboard",
+              "ok": true,
+              "tags": [],
+              "tests": [
+                {
+                  "timeout": 30000,
+                  "annotations": [],
+                  "expectedStatus": "passed",
+                  "projectId": "mobile-safari",
+                  "projectName": "mobile-safari",
+                  "results": [],
+                  "status": "skipped"
+                }
+              ],
+              "id": "747340cde928aa6c3216-51a59f353a64f5398219",
+              "file": "dashboard/dashboard.spec.ts",
+              "line": 31,
+              "column": 7
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "errors": [],
+  "stats": {
+    "startTime": "2026-07-08T22:38:34.664Z",
+    "duration": 196.06400000000008,
+    "expected": 0,
+    "skipped": 121,
+    "unexpected": 0,
+    "flaky": 0
+  }
+}

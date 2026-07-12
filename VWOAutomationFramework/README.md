@@ -66,7 +66,13 @@ VWOAutomationFramework/
 | Reports | ReportsTest | Dashboards, filters, export, scheduling |
 | Integrations | IntegrationsTest | Navigation, project selector |
 | Plan Management | PlanManagementTest | Program management, notifications |
-| Booking API | BookingAPITest (planned) | Health check, CRUD, auth, filters, validation |
+| Booking API – Health Check | HealthCheckTest | 201 status, response time, consecutive calls, headers, method validation |
+| Booking API – Auth | AuthTest | Valid/invalid credentials, token generation, missing headers |
+| Booking API – Get All | GetAllBookingTest | List all, filter by name/date, combined filters, empty results |
+| Booking API – Get Single | GetSingleBookingTest | Valid ID, non-existent, negative, string ID, field validation |
+| Booking API – Full Update | UpdateBookingTest | PUT with/without auth, round-trip, invalid data, extra fields |
+| Booking API – Partial Update | PartialUpdateBookingTest | PATCH single/multiple fields, preserve others, null values |
+| Booking API – Delete | DeleteBookingTest | Valid delete, double delete, unauth, create-verify-delete cycle |
 
 ## How to Run
 

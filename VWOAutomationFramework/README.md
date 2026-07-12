@@ -66,6 +66,7 @@ VWOAutomationFramework/
 | Reports | ReportsTest | Dashboards, filters, export, scheduling |
 | Integrations | IntegrationsTest | Navigation, project selector |
 | Plan Management | PlanManagementTest | Program management, notifications |
+| Booking API | BookingAPITest (planned) | Health check, CRUD, auth, filters, validation |
 
 ## How to Run
 

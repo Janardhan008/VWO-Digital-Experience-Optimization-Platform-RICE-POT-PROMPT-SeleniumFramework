@@ -748,6 +748,175 @@ End of Day → Update Execution Dashboard
 
 ---
 
+## 20. API Testing – Booking Engine
+
+### 20.1 Module Overview
+
+| **Module** | Booking Engine REST API |
+|---|---|
+| **Base URL** | `https://restful-booker.herokuapp.com` |
+| **Protocol** | REST over HTTPS |
+| **Content-Type** | `application/json` |
+| **Auth** | Basic Auth (username: `admin`, password: `password123`) |
+| **Tools** | REST Assured + TestNG / Postman |
+
+### 20.2 Coverage Summary
+
+| Endpoint | Method | Test Cases | P0 | P1 | Est. Time (min) |
+|----------|:------:|:----------:|:--:|:--:|:---------------:|
+| Health Check | `GET /ping` | 6 | 4 | 2 | 10 |
+| Get All Booking | `GET /booking` | 10 | 4 | 6 | 10 |
+| Get Single Booking | `GET /booking/{id}` | 12 | 8 | 4 | 15 |
+| Full Update | `PUT /booking/{id}` | 10 | 4 | 6 | 15 |
+| Partial Update | `PATCH /booking/{id}` | 10 | 6 | 4 | 10 |
+| Delete Booking | `DELETE /booking/{id}` | 8 | 6 | 2 | 5 |
+| **TOTAL** | | **56** | **32** | **24** | **65** |
+
+### 20.3 Test Case Preconditions
+
+- Booking IDs 1–10 are pre-seeded in the test environment
+- Auth token obtained via `POST /auth` for write operations
+- Test data isolation: each destructive test creates its own resource
+
+### 20.4 Ping / Health Check — `GET /ping`
+
+| # | Scenario | Priority | Automation | API Ref |
+|---|----------|:--------:|:----------:|:--------:|
+| TC-PNG-001 | Verify health check returns `201 Created` with no body | P0 | ✅ | `GET /ping` |
+| TC-PNG-002 | Verify response time is under 500ms | P0 | ✅ | `GET /ping` |
+| TC-PNG-003 | Verify endpoint responds without authentication | P0 | ✅ | `GET /ping` |
+| TC-PNG-004 | Verify endpoint does not accept `POST` / `PUT` / `DELETE` (405) | P1 | ✅ | `GET /ping` |
+| TC-PNG-005 | Verify health check after consecutive 10 rapid calls | P1 | ✅ | `GET /ping` |
+| TC-PNG-006 | Verify response headers (`Content-Type`, `Server`, `Date`) are present | P1 | ✅ | `GET /ping` |
+
+### 20.5 Get All Booking — `GET /booking`
+
+| # | Scenario | Priority | Automation | API Ref |
+|---|----------|:--------:|:----------:|:--------:|
+| TC-BOK-001 | Verify endpoint returns `200 OK` with array of booking IDs | P0 | ✅ | `GET /booking` |
+| TC-BOK-002 | Verify response body is a non-empty JSON array | P0 | ✅ | `GET /booking` |
+| TC-BOK-003 | Verify each object has `bookingid` as integer | P0 | ✅ | `GET /booking` |
+| TC-BOK-004 | Verify `bookingid` values are unique and sequential | P1 | ✅ | `GET /booking` |
+| TC-BOK-005 | Verify filtering by `firstname` returns matching results | P1 | ✅ | `GET /booking?firstname=John` |
+| TC-BOK-006 | Verify filtering by `lastname` returns matching results | P1 | ✅ | `GET /booking?lastname=Smith` |
+| TC-BOK-007 | Verify filtering by `checkin` date returns correct bookings | P1 | ✅ | `GET /booking?checkin=2026-01-01` |
+| TC-BOK-008 | Verify filtering by `checkout` date returns correct bookings | P1 | ✅ | `GET /booking?checkout=2026-02-01` |
+| TC-BOK-009 | Verify combined filters (`firstname` + `checkin`) work correctly | P1 | ✅ | `GET /booking?firstname=John&checkin=2026-01-01` |
+| TC-BOK-010 | Verify invalid filter value returns empty array `[]` | P1 | ✅ | `GET /booking?firstname=NonExistent` |
+
+### 20.6 Get Single Booking — `GET /booking/{id}`
+
+| # | Scenario | Priority | Automation | API Ref |
+|---|----------|:--------:|:----------:|:--------:|
+| TC-BOK-011 | Verify valid booking id returns `200 OK` with full booking details | P0 | ✅ | `GET /booking/1` |
+| TC-BOK-012 | Verify response includes all required fields (`firstname`, `lastname`, `totalprice`, `depositpaid`, `bookingdates`, `additionalneeds`) | P0 | ✅ | `GET /booking/1` |
+| TC-BOK-013 | Verify `firstname` and `lastname` are non-empty strings | P0 | ✅ | `GET /booking/1` |
+| TC-BOK-014 | Verify `totalprice` is a positive number | P0 | ✅ | `GET /booking/1` |
+| TC-BOK-015 | Verify `depositpaid` is a boolean | P0 | ✅ | `GET /booking/1` |
+| TC-BOK-016 | Verify `bookingdates` contains `checkin` and `checkout` in `YYYY-MM-DD` format | P0 | ✅ | `GET /booking/1` |
+| TC-BOK-017 | Verify `checkout` date is >= `checkin` date | P0 | ✅ | `GET /booking/1` |
+| TC-BOK-018 | Verify non-existent id returns `404 Not Found` | P0 | ✅ | `GET /booking/99999` |
+| TC-BOK-019 | Verify negative id returns `400 Bad Request` or `404 Not Found` | P1 | ✅ | `GET /booking/-1` |
+| TC-BOK-020 | Verify string id returns `400 Bad Request` | P1 | ✅ | `GET /booking/abc` |
+| TC-BOK-021 | Verify special character id returns `400 Bad Request` | P1 | ✅ | `GET /booking/@#$` |
+| TC-BOK-022 | Verify response without `Accept` header defaults to JSON | P1 | ✅ | `GET /booking/1` |
+
+### 20.7 Full Update (PUT) — `PUT /booking/{id}`
+
+| # | Scenario | Priority | Automation | API Ref |
+|---|----------|:--------:|:----------:|:--------:|
+| TC-PUT-001 | Verify full update with valid auth returns `200 OK` with updated body | P0 | ✅ | `PUT /booking/1` |
+| TC-PUT-002 | Verify all fields are updated correctly after PUT | P0 | ✅ | `PUT /booking/1` |
+| TC-PUT-003 | Verify response body matches request payload exactly (round-trip) | P0 | ✅ | `PUT /booking/1` |
+| TC-PUT-004 | Verify update without auth header returns `403 Forbidden` | P0 | ✅ | `PUT /booking/1` |
+| TC-PUT-005 | Verify update with invalid auth returns `403 Forbidden` | P1 | ✅ | `PUT /booking/1` |
+| TC-PUT-006 | Verify update to non-existent id returns `405 Method Not Allowed` or `404` | P1 | ✅ | `PUT /booking/99999` |
+| TC-PUT-007 | Verify update with missing required fields returns `400 Bad Request` | P1 | ✅ | `PUT /booking/1` |
+| TC-PUT-008 | Verify update with invalid data types (string for `totalprice`) returns `400` | P1 | ✅ | `PUT /booking/1` |
+| TC-PUT-009 | Verify update with extra unexpected fields is accepted (backward compatible) | P1 | ✅ | `PUT /booking/1` |
+| TC-PUT-010 | Verify `checkout` before `checkin` in update returns `400 Bad Request` | P1 | ✅ | `PUT /booking/1` |
+
+### 20.8 Partial Update (PATCH) — `PATCH /booking/{id}`
+
+| # | Scenario | Priority | Automation | API Ref |
+|---|----------|:--------:|:----------:|:--------:|
+| TC-PTC-001 | Verify partial update with single field (`firstname`) returns `200 OK` | P0 | ✅ | `PATCH /booking/1` |
+| TC-PTC-002 | Verify only the patched field changes, others remain intact | P0 | ✅ | `PATCH /booking/1` |
+| TC-PTC-003 | Verify patch with `totalprice` updates correctly | P0 | ✅ | `PATCH /booking/1` |
+| TC-PTC-004 | Verify patch with `bookingdates.checkin` updates correctly | P0 | ✅ | `PATCH /booking/1` |
+| TC-PTC-005 | Verify patch without auth returns `403 Forbidden` | P0 | ✅ | `PATCH /booking/1` |
+| TC-PTC-006 | Verify patch with empty body returns `400 Bad Request` | P1 | ✅ | `PATCH /booking/1` |
+| TC-PTC-007 | Verify patch to non-existent id returns `404 Not Found` | P1 | ✅ | `PATCH /booking/99999` |
+| TC-PTC-008 | Verify patch with invalid field name ignores unknown field | P1 | ✅ | `PATCH /booking/1` |
+| TC-PTC-009 | Verify patch with null value for required field returns `400 Bad Request` | P1 | ✅ | `PATCH /booking/1` |
+| TC-PTC-010 | Verify patch with `additionalneeds` set to empty string works | P1 | ✅ | `PATCH /booking/1` |
+
+### 20.9 Delete Booking — `DELETE /booking/{id}`
+
+| # | Scenario | Priority | Automation | API Ref |
+|---|----------|:--------:|:----------:|:--------:|
+| TC-DEL-001 | Verify delete with valid auth returns `201 Created` | P0 | ✅ | `DELETE /booking/1` |
+| TC-DEL-002 | Verify deleted booking returns `404 Not Found` on subsequent GET | P0 | ✅ | `GET /booking/1` after `DELETE` |
+| TC-DEL-003 | Verify delete without auth header returns `403 Forbidden` | P0 | ✅ | `DELETE /booking/1` |
+| TC-DEL-004 | Verify delete with invalid auth returns `403 Forbidden` | P0 | ✅ | `DELETE /booking/1` |
+| TC-DEL-005 | Verify delete of non-existent id returns `405 Method Not Allowed` | P1 | ✅ | `DELETE /booking/99999` |
+| TC-DEL-006 | Verify double delete of same id returns `405 Method Not Allowed` | P1 | ✅ | `DELETE /booking/1` (x2) |
+| TC-DEL-007 | Verify `DELETE` with `GET` method returns `405` | P0 | ✅ | `GET /booking/1` with del intent |
+| TC-DEL-008 | Verify delete booking created mid-test (self-healing data) | P1 | ✅ | Create → Delete → Verify |
+
+### 20.10 Authorization — `POST /auth`
+
+| # | Scenario | Priority | Automation | API Ref |
+|---|----------|:--------:|:----------:|:--------:|
+| TC-AUTH-020 | Verify valid credentials return `200 OK` with token | P0 | ✅ | `POST /auth` |
+| TC-AUTH-021 | Verify token is a non-empty string | P0 | ✅ | `POST /auth` |
+| TC-AUTH-022 | Verify invalid username returns `200 OK` but may fail on subsequent write | P1 | ✅ | `POST /auth` |
+| TC-AUTH-023 | Verify empty credentials return `400 Bad Request` | P1 | ✅ | `POST /auth` |
+| TC-AUTH-024 | Verify missing `Content-Type` header returns `400 Bad Request` | P1 | ✅ | `POST /auth` |
+
+### 20.11 Automation Implementation
+
+```java
+// Example: REST Assured test for GET /booking/{id}
+@Test(description = "TC-BOK-011: Verify valid booking id returns 200 OK")
+public void testGetSingleBookingValid() {
+    Booking response = given()
+        .spec(requestSpec)
+    .when()
+        .get("/booking/1")
+    .then()
+        .statusCode(200)
+        .extract()
+        .as(Booking.class);
+
+    assertThat(response.getFirstname()).isNotEmpty();
+    assertThat(response.getTotalprice()).isPositive();
+    assertThat(response.getBookingdates().getCheckout())
+        .isAfterOrEqualTo(response.getBookingdates().getCheckin());
+}
+```
+
+### 20.12 Booking API — Test Data Model
+
+```json
+{
+  "bookingid": 1,
+  "booking": {
+    "firstname": "John",
+    "lastname": "Smith",
+    "totalprice": 250,
+    "depositpaid": true,
+    "bookingdates": {
+      "checkin": "2026-01-01",
+      "checkout": "2026-01-10"
+    },
+    "additionalneeds": "Breakfast"
+  }
+}
+```
+
+---
+
 ## Appendix A: Test Environment Configuration
 
 | Component | Version | Port | Notes |

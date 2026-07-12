@@ -1,0 +1,94 @@
+<!DOCTYPE suite SYSTEM "https://testng.org/testng-1.0.dtd">
+<suite name="VWO Digital Experience Optimization Suite" verbose="2" parallel="classes" thread-count="4"
+       configfailurepolicy="continue">
+
+    <listeners>
+        <listener class-name="listeners.TestListener"/>
+    </listeners>
+
+    <test name="Authentication &amp; Login Flows">
+        <classes>
+            <class name="tests.login.LoginTest"/>
+        </classes>
+    </test>
+
+    <test name="Dashboard &amp; Navigation Flows">
+        <classes>
+            <class name="tests.dashboard.DashboardTest"/>
+        </classes>
+    </test>
+
+    <test name="A/B Testing Flows">
+        <classes>
+            <class name="tests.experiments.CreateABTestTest"/>
+        </classes>
+    </test>
+
+    <test name="Split URL Testing Flows">
+        <classes>
+            <class name="tests.experiments.CreateSplitURLTest"/>
+        </classes>
+    </test>
+
+    <test name="Multivariate Testing Flows">
+        <classes>
+            <class name="tests.experiments.CreateMVTestTest"/>
+        </classes>
+    </test>
+
+    <test name="SmartStats Engine Flows">
+        <classes>
+            <class name="tests.experiments.SmartStatsTest"/>
+        </classes>
+    </test>
+
+    <test name="Code Editor Flows">
+        <classes>
+            <class name="tests.experiments.CodeEditorTest"/>
+        </classes>
+    </test>
+
+    <test name="Audience Targeting Flows">
+        <classes>
+            <class name="tests.experiments.AudienceTargetingTest"/>
+        </classes>
+    </test>
+
+    <test name="Behavioral Insights - Heatmaps">
+        <classes>
+            <class name="tests.insights.HeatmapTest"/>
+        </classes>
+    </test>
+
+    <test name="Behavioral Insights - Session Recordings">
+        <classes>
+            <class name="tests.insights.SessionRecordingTest"/>
+        </classes>
+    </test>
+
+    <test name="Behavioral Insights - Funnels &amp; Surveys">
+        <classes>
+            <class name="tests.insights.FunnelSurveyTest"/>
+        </classes>
+    </test>
+
+    <test name="Personalization Flows">
+        <classes>
+            <class name="tests.personalization.PersonalizationTest"/>
+        </classes>
+    </test>
+
+    <test name="Reporting &amp; Dashboards">
+        <classes>
+            <class name="tests.reports.ReportsTest"/>
+        </classes>
+    </test>
+
+    <test name="Integrations &amp; Plan Management">
+        <classes>
+            <class name="tests.integrations.IntegrationsTest"/>
+            <class name="tests.plan.PlanManagementTest"/>
+        </classes>
+    </test>
+
+</suite>

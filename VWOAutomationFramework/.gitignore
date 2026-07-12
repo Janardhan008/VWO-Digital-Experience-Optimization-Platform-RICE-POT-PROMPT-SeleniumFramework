@@ -1,0 +1,43 @@
+# Maven
+target/
+*.jar
+*.war
+*.ear
+
+# IDE
+.idea/
+*.iml
+.vscode/
+.settings/
+.project
+.classpath
+.factorypath
+
+# Eclipse
+bin/
+*.class
+
+# Logs
+logs/
+*.log
+
+# Screenshots
+screenshots/
+
+# Reports
+reports/
+test-output/
+
+# OS
+.DS_Store
+Thumbs.db
+*.swp
+*~
+
+# Environment
+.env
+*.properties.local
+
+# Test Data (keep template, ignore actual data)
+resources/testdata/*.xlsx
+!resources/testdata/.gitkeep
